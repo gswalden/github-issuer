@@ -1,0 +1,7 @@
+default:
+  assignee: gswalden
+
+repos:
+  gswalden/github-issuer:
+    - title: A very important issue
+      body: I would love to fix this!
