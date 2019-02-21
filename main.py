@@ -7,7 +7,9 @@ g = Github(os.getenv('GITHUB_TOKEN'))
 with open('template.yml') as f:
     my_input = yaml.load(f)
 
-default = my_input['default']
+default = {}
+if 'default' in my_input:
+    default = my_input['default']
 
 for repo_key, issues in my_input['repos'].items():
     repo = g.get_repo(repo_key)
